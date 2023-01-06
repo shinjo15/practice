@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>レシピの投稿 | 管理画面 | Dummy Kitchen</title>
+</head>
+<body>
+  <h1>レシピの投稿</h1>
+  <form action="receive.php" method="post" enctype="multipart/form-data">
+    <p>
+      <label>
+        タイトル（必須項目）
+        <input type="text" name="tilte" placeholder="タイトルを入力" required>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        サムネイル画像
+        <input type="file" name="thumbnail">
+      </label>
+    </p>
+
+    <p>
+      <label>
+        キーワード（複数選択可）
+        <ul>
+          <li>簡単<input type="checkbox" name="keywords[]" value="簡単"></li>
+          <li>お弁当<input type="checkbox" name="keywords[]" value="お弁当"></li>
+          <li>子供向け<input type="checkbox" name="keywords[]" value="子供向け"></li>
+          <li>ダイエット<input type="checkbox" name="keywords[]" value="ダイエット"></li>
+          <li>作り置き<input type="checkbox" name="keywords[]" value="作り置き"></li>
+          <li>節約<input type="checkbox" name="keywords[]" value="節約"></li>
+        </ul>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        カテゴリ
+        <select name="category">
+          <option label="--カテゴリを選択して下さい--" value="未選択"></option>
+          <option label="ごはん" value="ごはん"></option>
+          <option label="パン" value="パン"></option>
+          <option label="パスタ" value="パスタ"></option>
+          <option label="麺" value="麺"></option>
+          <option label="お肉" value="お肉"></option>
+          <option label="魚介" value="魚介"></option>
+          <option label="揚げ物" value="揚げ物"></option>
+          <option label="スープ" value="スープ"></option>
+          <option label="サラダ" value="サラダ"></option>
+          <option label="大豆加工品" value="大豆加工品"></option>
+          <option label="粉もの" value="粉もの"></option>
+        </select>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        投稿内容(必須項目)
+        <textarea name="content" cols="50" rows="15" placeholder="本文を入力" required></textarea>
+      </label>
+    </p>
+
+    <p><button>投稿する</button></p>
+  </form>
+</body>
+</html>
